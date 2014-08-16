@@ -52,8 +52,7 @@ class Conf
         $this->data[$key] = $value;
     }
 }
-/*
-$conf = Conf::getIns();
+/*$conf = Conf::getIns();
 var_dump($conf);
 echo $conf->host, $conf->user, $conf->pwd;
 echo '<br />';

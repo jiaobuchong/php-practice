@@ -18,4 +18,6 @@
               还有包括缓存信息，smarty的目录信息等等，要求能被多个类读到。
 
 
+linux环境：
+/data/log 目录要有可写权限:chmod o+w log
 

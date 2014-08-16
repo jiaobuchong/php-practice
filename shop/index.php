@@ -8,4 +8,11 @@
     echo '<br />';
     $conf->template_dir = './www/smarty';
     echo $conf->template_dir;
+    echo '<br />';
+    echo '<hr />';
+
+    for ($i = 0; $i < 10000; $i++)
+        Log::write("发不耐烦东北 发表方面发表麻烦了发表方面；能力烦恼悲愤难； 你悲愤难发奶粉呢烦恼发奶粉");
+    
+    
 ?> 

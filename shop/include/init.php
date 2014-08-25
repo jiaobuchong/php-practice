@@ -10,10 +10,17 @@ define('DEBUG', true);
 require(ROOT . 'include/conf.class.php');
 require(ROOT . 'include/db.class.php');
 require(ROOT . 'include/log.class.php');
+require(ROOT . 'include/lib_base.php');
+
+//过滤参数，用递归的方式过滤$_GET, $_POST, $_COOKIE
+$_GET = _addslashes($_GET);
+$_POST = _addslashes($_POST);
+$_COOKIE = _addslashes($_COOKIE);
+
 //设置报错级别
 if (defined('DEBUG'))
 {
-    error_reporting(E_ALL);
+    error_reporting(E_ALL | E_STRICT);
 }
 else
 {

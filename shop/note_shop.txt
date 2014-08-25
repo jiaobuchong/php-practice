@@ -20,4 +20,5 @@
 
 linux环境：
 /data/log 目录要有可写权限:chmod o+w log
+在一次运行php进程的过程中filesize()的结果会被缓存，很多文件信息获取函数的结果都会被缓存，如filemtime()
 

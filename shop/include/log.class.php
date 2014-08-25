@@ -45,6 +45,9 @@ class Log
             touch($log);
             return $log;
         }
+
+        //clear the cache
+        clearstatcache(true, $log);
         $size = filesize($log);
         if ($size <= 1024 * 1024)
         {

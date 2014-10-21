@@ -1,0 +1,17 @@
+事务：将多条sql操作（增删改）作为一个操作单元，要么都成功，要么都失败。
+表的类型为InnoDB类型的表
+create table demo(
+id int auto_increment primary key,
+username char(50), 
+money double
+)engine=innodb;
+
+set autocommit = 0;  关掉自动提交
+start transation;
+update demo set money = 24244;
+delete from demo;   误操作
+rollback    回到初始状态
+commit   提交
+
+
+

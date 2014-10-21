@@ -24,7 +24,7 @@ class Conf
     {
         if (self::$ins instanceof self)
         {
-            return self::$ins;
+            return self::$ins; 
         }
         else
         {

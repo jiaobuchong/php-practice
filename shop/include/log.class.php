@@ -58,7 +58,7 @@ class Log
         {
             return $log;
         }
-        else
+        else   //rename success
         {
             touch($log);
             return $log;

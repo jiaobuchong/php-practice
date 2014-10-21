@@ -11,6 +11,7 @@ require(ROOT . 'include/conf.class.php');
 require(ROOT . 'include/db.class.php');
 require(ROOT . 'include/log.class.php');
 require(ROOT . 'include/lib_base.php');
+require(ROOT . 'include/pdo.class.php');
 
 //过滤参数，用递归的方式过滤$_GET, $_POST, $_COOKIE
 $_GET = _addslashes($_GET);

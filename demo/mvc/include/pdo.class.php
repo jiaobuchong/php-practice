@@ -97,6 +97,10 @@ class Mysql
 
         try{
             echo $query;
+            
+            $mess = "这是一次访问数据库。\n" . $query;
+            $this->writeToLog($mess);      //把这一次数据库的查询写入日志
+
             $this->stmt = $this->pdo->prepare($query);    //预处理对象
             print_r($this->parameters); 
             if (!empty($this->parameters))
@@ -175,7 +179,7 @@ class Mysql
     private function bindMore($parray)
     {
         $arr = array();
-        if (is_array($parray))
+        if (is_array($parray) && !empty($parray))
         {
             //$i = 0;
             foreach($parray as $key => $value)
@@ -197,7 +201,7 @@ class Mysql
       $query     SELECT * FROM test WHERE firstname = :firstname AND id = :id
       $data      array('firstname'=>'jack', 'id'=>1)
     */
-    public function getAll($query, $data, $fetchmode=PDO::FETCH_ASSOC)
+    public function getAll($query, $data = array(), $fetchmode=PDO::FETCH_ASSOC)
     {
         $this->parameters = $this->bindMore($data);
         $this->init($query);

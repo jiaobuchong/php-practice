@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <title>model测试，显示用户列表</title>
+</head>
+<body>
+<table class="" border="1px">
+    <tr><td>username</td><td>money</td></tr>
+    <?php foreach($list as $v) { ?>
+    <tr>
+        <td><?php echo $v['username'];?></td>     
+        <td><?php echo $v['money']; ?></td>     
+    </tr>
+   <?php }
+        
+    ?>
+</table>
+</body>
+</html>

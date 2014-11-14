@@ -7,11 +7,20 @@ init.php,框架初始化
 define('ROOT', str_replace('\\', '/', dirname(dirname(__FILE__))) . '/');
 define('DEBUG', true);
 
-require(ROOT . 'include/conf.class.php');
-require(ROOT . 'include/db.class.php');
-require(ROOT . 'include/log.class.php');
 require(ROOT . 'include/lib_base.php');
-require(ROOT . 'include/pdo.class.php');
+
+//自动加载类
+function __autoload($class)
+{
+    if (substr(strtolower($class), -5) == 'model')
+    {
+        require(ROOT . 'model/' . $class . '.class.php');
+    }
+    else
+    {
+        require(ROOT . 'include/' . $class . '.class.php');
+    }
+}
 
 //过滤参数，用递归的方式过滤$_GET, $_POST, $_COOKIE
 $_GET = _addslashes($_GET);

@@ -22,3 +22,16 @@ linux环境：
 /data/log 目录要有可写权限:chmod o+w log
 在一次运行php进程的过程中filesize()的结果会被缓存，很多文件信息获取函数的结果都会被缓存，如filemtime()
 
+
+model 增删改查集中到model, 业务模型
+所有的SQL语句都到model中去了
+
+include/ 下的类文件统一为Test.class.php 类名统一为大写的 class Test{}
+model/   的model文件统一为AddCate.class.php 类名统一为class AddCate{}
+
+create table cate(
+     id int auto_increment primary key,
+     catename varchar(28) not null default '',
+     intro varchar(200) not null default '')
+     engine myisam charset utf8;
+

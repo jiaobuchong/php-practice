@@ -1,6 +1,7 @@
 <?php
     header('Content-Type:text/html;charset=utf8');
     /*所有由用户直接访问到的这些页面都得首先加载init.php*/ 
+    define('ACC', true);
     require('./include/init.php');
     echo ROOT, '<br />';   //根目录
 

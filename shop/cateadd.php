@@ -4,6 +4,7 @@
 判断model的返回值
 */ 
 //接收数据
+define('ACC', true);
 require('./include/init.php');
 $data = array('catename' => $_POST['catename'], 'intro' => $_POST['intro']);
 

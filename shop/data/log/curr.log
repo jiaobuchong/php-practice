@@ -4,3 +4,33 @@ INSERT INTO cate (catename,intro) VALUES(:catename,:intro)
 INSERT INTO cate (catename,intro) VALUES(:catename,:intro)
 2014-11-13 07:57:20:      这是一次访问数据库。
 INSERT INTO cate (catename,intro) VALUES(:catename,:intro)
+2014-11-15 19:49:01:      这是一次访问数据库。
+INSERT INTO cate (catename,intro) VALUES(:catename,:intro)
+2014-11-15 20:10:06:      这是一次访问数据库。
+INSERT INTO test (username,money) VALUES(:username,:money)
+2014-11-15 20:10:06:      这是一次访问数据库。
+DELETE FROM test WHERE id=:id
+2014-11-15 20:10:06:      这是一次访问数据库。
+UPDATE test SET username=:username,money=:money WHERE id=:id
+2014-11-15 20:10:06:      这是一次访问数据库。
+SELECT * FROM test WHERE username=:username AND id=:id
+2014-11-15 20:14:55:      这是一次访问数据库。
+INSERT INTO test (username,money) VALUES(:username,:money)
+2014-11-15 20:14:55:      这是一次访问数据库。
+DELETE FROM test WHERE id=:id
+2014-11-15 20:14:55:      这是一次访问数据库。
+UPDATE test SET username=:username,money=:money WHERE id=:id
+2014-11-15 20:14:55:      这是一次访问数据库。
+SELECT * FROM test WHERE username=:username AND id=:id
+2014-11-15 20:18:18:      这是一次访问数据库。
+INSERT INTO test (username,money) VALUES(:username,:money)
+2014-11-15 20:18:18:      这是一次访问数据库。
+DELETE FROM test WHERE id=:id
+2014-11-15 20:18:18:      这是一次访问数据库。
+UPDATE test SET username=:username,money=:money WHERE id=:id
+2014-11-15 20:18:18:      这是一次访问数据库。
+SELECT * FROM test WHERE username=:username AND id=:id
+2014-11-15 20:20:01:      这是一次访问数据库。
+INSERT INTO cate (catename,intro) VALUES(:catename,:intro)
+2014-11-17 06:19:00:      这是一次访问数据库。
+INSERT INTO category (catename,intro,parent_id) VALUES(:catename,:intro,:parent_id)

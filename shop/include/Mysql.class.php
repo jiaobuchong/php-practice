@@ -1,4 +1,5 @@
 <?php
+defined('ACC') || exit("This file is denied!");
 class Mysql
 {
 

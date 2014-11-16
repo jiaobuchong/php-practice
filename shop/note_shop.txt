@@ -27,11 +27,18 @@ model 增删改查集中到model, 业务模型
 所有的SQL语句都到model中去了
 
 include/ 下的类文件统一为Test.class.php 类名统一为大写的 class Test{}
-model/   的model文件统一为AddCate.class.php 类名统一为class AddCate{}
+model/   的model文件统一为AddCateModel.class.php 类名统一为class AddCateModel{}
 
-create table cate(
+include/ 目录下的文件中都加入了这一行代码，是为了防止非法访问
+defined('ACC') || exit("This file is denied!");
+
+栏目表：
+create table category(
      id int auto_increment primary key,
      catename varchar(28) not null default '',
-     intro varchar(200) not null default '')
+     intro varchar(200) not null default '',
+     parent_id int not null default 0)
      engine myisam charset utf8;
+
+
 

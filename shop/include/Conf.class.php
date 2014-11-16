@@ -3,6 +3,7 @@
     file: conf.class.php
     配置文件读写类
 */ 
+defined('ACC') || exit("This file is denied!");
 class Conf
 {
     private static $ins = null;

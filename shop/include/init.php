@@ -4,6 +4,7 @@ init.php,框架初始化
 
 */ 
 //定义一些常量
+defined('ACC') || exit("This file is denied!");
 define('ROOT', str_replace('\\', '/', dirname(dirname(__FILE__))) . '/');
 define('DEBUG', true);
 

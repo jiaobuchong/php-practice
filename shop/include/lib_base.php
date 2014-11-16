@@ -1,5 +1,6 @@
 <?php
 /*递归转义$_GET和$_POST的数据*/
+defined('ACC') || exit("This file is denied!");
 function _addslashes($arr)
 {
     foreach ($arr as $key => $value)

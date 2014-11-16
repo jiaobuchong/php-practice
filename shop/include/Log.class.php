@@ -11,6 +11,7 @@ When the log receive the content,
         if the size > 1M, backup
         else write to the log
 */ 
+defined('ACC') || exit("This file is denied!");
 class Log
 {
     const LOGFILE = 'data/log/curr.log';   //a constant variable, the name of the log file

@@ -20,16 +20,16 @@ if (empty($_POST['catename']) && empty($_POST['intro']) && empty($_POST['parent_
 $data['catename']= $_POST['catename'];
 $data['intro'] = $_POST['intro'];
 $data['parent_id'] = $_POST['parent_id'];
-
+$data['id'] = $_POST['id'];
 $cate = new CategoryModel();
-if ($cate->add($data))
+if ($cate->update($data))
 {
-    echo '栏目添加成功！';
+    echo '栏目修改成功！';
     exit();
 }
 else
 {
-    echo '栏目添加失败！';
+    echo '栏目修改失败！';
     exit();
 }
 ?>

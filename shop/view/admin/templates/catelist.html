@@ -31,12 +31,12 @@
     <th>操作</th>
   </tr>
 
-    <?php //foreach($catlist as $v) { ?>
+    <?php foreach($listdata as $v) { ?>
     <tr align="center" class="0" id="0_1" id = 'tr_4'>
     <td align="left" class="first-cell" style = 'padding-left="1"'>
-            <img src="../view/admin/images/menu_minus.gif" id="icon_0_1" width="9" height="9" border="0" style="margin-left:<?php //echo $v['lev']; ?>em" />
+            <img src="../view/admin/images/menu_minus.gif" id="icon_0_1" width="9" height="9" border="0" style="margin-left:<?php echo $v['len']; ?>em" />
 
-            <span><a href="#" ><?php //echo $v['cat_name']; ?></a></span>
+            <span><a href="#" ><?php echo $v['catename']; ?></a></span>
         </td>
     <td width="10%">0</td>
     <td width="10%"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
@@ -47,11 +47,11 @@
     <td width="10%" align="right"><span>50</span></td>
     <td width="24%" align="center">
       <a href="#">转移商品</a> |
-      <a href="catedit.php?cat_id=<?php echo $v['cat_id'];?>">编辑</a> |
-      <a href="catedel.php?cat_id=<?php echo $v['cat_id'];?>" onclick="if(!confirm('确实要删除吗?')){return false;};" title="移除">移除</a>
+      <a href="cateedit.php?id=<?php echo $v['id']; ?>">编辑</a> |
+      <a href="catedel.php?id=<?php echo $v['id']; ?>" onclick="return confirmDele();">移除</a> 
     </td>
   </tr>
-    <?php //} ?>
+    <?php } ?>
   </table>
 </div>
 </form>
@@ -62,5 +62,11 @@
 版权所有 &copy; 2005-2010 上海商派网络科技有限公司，并保留所有权利
 。</div>
 
+<script type="text/javascript" charset="utf-8">
+function confirmDele()
+{
+    return window.confirm('您真的要删除这个栏目吗？');
+}
+</script>
 </body>
 </html>

@@ -34,3 +34,453 @@ SELECT * FROM test WHERE username=:username AND id=:id
 INSERT INTO cate (catename,intro) VALUES(:catename,:intro)
 2014-11-17 06:19:00:      这是一次访问数据库。
 INSERT INTO category (catename,intro,parent_id) VALUES(:catename,:intro,:parent_id)
+2014-11-18 19:12:32:      这是一次访问数据库。
+INSERT INTO category (catename,intro,parent_id) VALUES(:catename,:intro,:parent_id)
+2014-11-18 19:31:37:      这是一次访问数据库。
+
+2014-11-18 19:31:37:      数据库执行SQL出错。 SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty
+2014-11-18 19:32:26:      这是一次访问数据库。
+SELECT catename, intro, parent_id FROM category
+2014-11-18 19:32:30:      这是一次访问数据库。
+SELECT catename, intro, parent_id FROM category
+2014-11-18 19:33:08:      这是一次访问数据库。
+SELECT catename, intro, parent_id FROM category
+2014-11-18 20:25:36:      这是一次访问数据库。
+SELECT catename, intro, parent_id FROM ORDER BY id ASCcategory
+2014-11-18 20:25:36:      数据库执行SQL出错。SELECT catename, intro, parent_id FROM ORDER BY id ASCcategory SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY id ASCcategory' at line 1
+2014-11-18 20:25:40:      这是一次访问数据库。
+SELECT catename, intro, parent_id FROM ORDER BY id ASCcategory
+2014-11-18 20:25:40:      数据库执行SQL出错。SELECT catename, intro, parent_id FROM ORDER BY id ASCcategory SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'ORDER BY id ASCcategory' at line 1
+2014-11-18 20:26:42:      这是一次访问数据库。
+SELECT catename, intro, parent_id FROM categoryORDER BY id ASC
+2014-11-18 20:26:42:      数据库执行SQL出错。SELECT catename, intro, parent_id FROM categoryORDER BY id ASC SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'BY id ASC' at line 1
+2014-11-18 20:27:03:      这是一次访问数据库。
+SELECT catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 20:38:12:      这是一次访问数据库。
+SELECT catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 20:38:55:      这是一次访问数据库。
+SELECT catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 20:48:05:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 20:48:13:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 20:51:25:      这是一次访问数据库。
+INSERT INTO category (catename,intro,parent_id) VALUES(:catename,:intro,:parent_id)
+2014-11-18 20:51:28:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 21:16:11:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 21:16:20:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 21:18:21:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 21:19:33:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 21:20:59:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 21:21:19:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 21:21:40:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 21:22:19:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 21:26:17:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 21:26:20:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 21:26:50:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 21:26:52:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 21:27:25:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 21:27:27:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 22:34:28:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 22:34:30:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 23:02:59:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 23:03:14:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 23:03:47:      这是一次访问数据库。
+INSERT INTO category (catename,intro,parent_id) VALUES(:catename,:intro,:parent_id)
+2014-11-18 23:03:50:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 23:05:44:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 23:14:52:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 23:16:17:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 23:16:20:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 23:16:39:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 23:16:41:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 23:18:19:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-18 23:18:22:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 20:43:19:      数据库连接出错。SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+2014-11-20 20:43:32:      数据库连接出错。SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+2014-11-20 20:43:35:      数据库连接出错。SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+2014-11-20 20:43:47:      数据库连接出错。SQLSTATE[HY000] [2002] Can't connect to local MySQL server through socket '/var/run/mysqld/mysqld.sock' (2)
+2014-11-20 20:56:08:      这是一次访问数据库。
+INSERT INTO test (username,money) VALUES(:username,:money)
+2014-11-20 20:56:08:      这是一次访问数据库。
+DELETE FROM test WHERE id=:id
+2014-11-20 20:56:08:      这是一次访问数据库。
+UPDATE test SET username=:username,money=:money WHERE id=:id
+2014-11-20 20:56:08:      这是一次访问数据库。
+SELECT * FROM test WHERE username=:username AND id=:id
+2014-11-20 20:56:18:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 21:07:59:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 21:08:07:      这是一次访问数据库。
+DELETE FROM category WHERE id=:id
+2014-11-20 21:08:28:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 21:10:59:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 21:11:02:      这是一次访问数据库。
+DELETE FROM category WHERE id=:id
+2014-11-20 21:12:31:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 21:12:41:      这是一次访问数据库。
+DELETE FROM category WHERE id=:id
+2014-11-20 21:12:44:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 21:12:51:      这是一次访问数据库。
+DELETE FROM category WHERE id=:id
+2014-11-20 21:13:34:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 21:13:39:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 21:13:56:      这是一次访问数据库。
+INSERT INTO category (catename,intro,parent_id) VALUES(:catename,:intro,:parent_id)
+2014-11-20 21:13:59:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 21:14:05:      这是一次访问数据库。
+DELETE FROM category WHERE id=:id
+2014-11-20 21:14:07:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 21:14:15:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 21:14:24:      这是一次访问数据库。
+INSERT INTO category (catename,intro,parent_id) VALUES(:catename,:intro,:parent_id)
+2014-11-23 00:28:21:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-23 00:29:38:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-23 00:29:42:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-23 00:43:44:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-23 00:43:47:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-23 00:44:13:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-23 00:45:50:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-23 00:57:37:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-23 00:57:40:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-23 00:57:40:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-23 00:57:49:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-23 00:57:53:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-23 00:58:06:      这是一次访问数据库。
+INSERT INTO category (catename,intro,parent_id) VALUES(:catename,:intro,:parent_id)
+2014-11-23 00:58:07:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-23 00:58:12:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-23 00:58:37:      这是一次访问数据库。
+INSERT INTO category (catename,intro,parent_id) VALUES(:catename,:intro,:parent_id)
+2014-11-23 00:58:45:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-23 00:58:48:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-23 00:58:48:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:09:21:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:09:24:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 17:09:24:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:11:04:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:11:06:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:11:08:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 17:11:08:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:13:07:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:13:10:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 17:13:10:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:13:13:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:13:15:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 17:13:15:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:13:22:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:13:25:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 17:13:25:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:13:30:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 17:13:30:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:16:42:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:16:44:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 17:16:44:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:18:12:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:18:17:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 17:18:17:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:23:02:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:23:07:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 17:23:07:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:25:19:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:25:24:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:25:28:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 17:25:28:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:27:00:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:27:03:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 17:27:03:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:27:06:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:27:17:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 17:27:17:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:28:10:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:28:12:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 17:28:12:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:30:08:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:30:11:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 17:30:11:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:30:25:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:30:30:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:30:35:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 17:30:35:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:30:38:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:30:40:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 17:30:40:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:37:26:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:37:30:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 17:37:30:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:37:44:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:37:46:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 17:37:46:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:40:31:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 17:40:35:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 17:40:35:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 18:26:30:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 18:26:33:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 18:26:33:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 18:26:42:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 18:26:45:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 18:26:45:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 18:27:39:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 18:27:42:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 18:27:42:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 18:28:28:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 18:31:52:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 18:31:57:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 18:31:57:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 18:33:13:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 18:33:15:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 18:33:15:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 18:33:21:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 18:33:28:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 18:33:28:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 18:35:26:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 18:35:28:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 18:35:28:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 18:36:26:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 18:36:28:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 18:36:28:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 18:36:33:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 18:36:36:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 18:36:36:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 19:26:51:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 19:26:54:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 19:26:54:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 19:32:19:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 19:32:21:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 19:32:21:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 19:33:40:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 19:33:42:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 19:33:42:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 19:34:13:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 19:34:16:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 19:34:16:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 19:34:46:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 19:34:50:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 19:34:52:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 19:34:52:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 19:35:04:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 19:35:06:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 19:35:06:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 19:35:42:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 19:35:44:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 19:35:44:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 19:36:00:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 19:36:02:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 19:36:02:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 19:36:17:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 19:36:19:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 19:36:19:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 19:36:52:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 19:36:54:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 19:36:54:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 19:37:51:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 19:37:53:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 19:37:53:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 19:47:25:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 19:47:27:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 19:47:27:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 19:48:23:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 19:48:26:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 19:48:26:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 19:57:48:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 19:57:50:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 19:57:50:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 19:57:57:      这是一次访问数据库。
+UPDATE category SET catename=:catename,intro=:intro,parent_id=:parent_id WHERE id=:id
+2014-11-20 20:31:04:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 20:31:07:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 20:31:07:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 20:31:15:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-20 20:31:18:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-20 20:31:18:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC

@@ -59,5 +59,41 @@ class CategoryModel extends Model
     {
          return $this->db->query('update', $this->table, $data);
     } 
+
+    /*寻找子栏目
+    param: int $id
+    return array $id 栏目的子孙树
+    */
+    public function getSon($id)
+    {
+        $sql = 'select catename, intro, parent_id from ' . $this->table . ' where parent_id = :id';
+        return $this->db->single($sql, array('id'=>$id));
+    }
+     
+    /*寻找家谱树
+    param: int $id
+    return array $id 家谱树
+    */
+    public function getFatherTree($id = 0)
+    {
+        $this->select();
+        $tree = array();
+
+        //迭代寻找家谱树
+        while($id > 0)
+        {
+            foreach ($this->listdata as $v)
+            {
+                if ($v['id'] == $id)
+                {
+                    $tree[] = $v;
+                    $id = $v['parent_id'];
+                    break;   //找到相应的项目后，就不要往下继续找了
+                }
+            }
+        }
+        return $tree;
+    }
+
 }
 ?>

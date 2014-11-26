@@ -484,3 +484,113 @@ SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
 SELECT id, catename, intro, parent_id FROM category WHERE id = :id
 2014-11-20 20:31:18:      这是一次访问数据库。
 SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 02:15:08:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-25 18:43:55:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-25 18:43:55:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-25 18:44:04:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-25 18:44:32:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-25 18:44:32:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 03:11:10:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 03:11:22:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 03:11:22:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 03:15:26:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 03:15:26:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 03:15:31:      这是一次访问数据库。
+select catename, intro, parent_id from category where parent_id = :id
+2014-11-26 20:08:38:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 20:08:38:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 20:08:40:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 20:09:05:      这是一次访问数据库。
+INSERT INTO category (catename,intro,parent_id) VALUES(:catename,:intro,:parent_id)
+2014-11-26 20:09:35:      这是一次访问数据库。
+INSERT INTO category (catename,intro,parent_id) VALUES(:catename,:intro,:parent_id)
+2014-11-26 20:09:41:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 20:09:41:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 20:11:48:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 20:11:48:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 20:12:36:      这是一次访问数据库。
+INSERT INTO category (catename,intro,parent_id) VALUES(:catename,:intro,:parent_id)
+2014-11-26 20:12:42:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 20:12:42:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 20:59:52:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 20:59:52:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 20:59:57:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-26 20:59:57:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 21:00:09:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 21:05:38:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 21:05:38:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 21:05:42:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-26 21:05:42:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 21:06:23:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-26 21:06:23:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 21:06:33:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 21:07:06:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 21:07:48:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-26 21:07:48:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 21:07:54:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 21:09:34:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-26 21:09:34:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 21:09:42:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 21:10:11:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 21:10:11:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 21:10:52:      这是一次访问数据库。
+INSERT INTO category (catename,intro,parent_id) VALUES(:catename,:intro,:parent_id)
+2014-11-26 21:11:46:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 21:11:46:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 21:12:06:      这是一次访问数据库。
+INSERT INTO category (catename,intro,parent_id) VALUES(:catename,:intro,:parent_id)
+2014-11-26 21:12:12:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 21:12:12:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 21:12:23:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-11-26 21:12:23:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 21:12:37:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-11-26 21:12:37:      这是一次访问数据库。
+UPDATE category SET catename=:catename,intro=:intro,parent_id=:parent_id WHERE id=:id

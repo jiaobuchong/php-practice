@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+<form action="cateeditPro.php" method="post">
+    <p>栏目名称：<input type="text" name="catename" value="<?php echo $currdata['catename']?>" /></p>
+    <p>上级分类：
+       <select name="parent_id">
+            <option value="0">顶级分类</option>
+            <?php
+                foreach ($listdata as $v)
+                {
+            ?>
+            <option value="<?php echo $v['id']; ?>" 
+               <?php 
+               if ($currdata['parent_id'] == $v['id'])
+               {
+                   echo 'selected';
+               }
+               ?>
+            >
+                <?php echo str_repeat('&nbsp;', $v['len']), $v['catename'] ?>
+            </option>
+            <?php } ?>
+       </select>
+    </p>
+    <p>栏目简介：<textarea name="intro" /><?php echo $currdata['intro']?></textarea></p>
+    <p><input type="hidden" name="id" value="<?php echo $currdata['id']; ?>"></p>
+    <p><input type="submit" value="submit"></p>
+</form>
+<a href="../index.php">返回首页</a>
+</body>
+</html>

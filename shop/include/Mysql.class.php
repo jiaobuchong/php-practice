@@ -94,7 +94,7 @@ class Mysql
     private function init($query)
     {
         if (!$this->connected)
-            $this->connected();
+            $this->connect();
 
         try{
             echo $query;

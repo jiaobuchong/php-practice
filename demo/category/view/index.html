@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html lang="zh"> 
+<head> 
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+<h2>所有栏目显示</h2>
+<p><a href="./controller/cateadd.php">添加栏目</a></p>
+<table class="" border="2px" cellspacing="0">
+    <tr><th>id</th><th>catename</th><th>intro</th><th>parent_id</th><th>edit</th><th>operation</th></tr>
+    <?php 
+    foreach($listdata as $v) 
+    {
+    ?>
+        <tr>
+            <td><?php echo $v['id']; ?></td>
+            <td><?php echo str_repeat('&nbsp;', 2 * $v['len']), $v['catename']; ?></td>
+            <td><?php echo $v['intro']; ?></td>
+            <td><?php echo $v['parent_id']; ?></td>
+            <td><a href="./controller/cateedit.php?id=<?php echo $v['id']; ?>">编辑</a></td>
+            <td><a href="./controller/catedel.php?id=<?php echo $v['id']; ?>" onclick="return confirmDel();">删除</a></td>
+        </tr>
+   <?php } ?>
+</body>
+<script type="text/javascript" charset="utf-8">
+    function confirmDel()
+    {
+        return window.confirm("你确定要删除？");
+    }
+</script>
+</html>

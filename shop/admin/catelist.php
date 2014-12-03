@@ -7,7 +7,7 @@ $catelist = new CategoryModel();
 $catelist->select();
 $listdata = $catelist->getCatTree();
 echo '<pre>';
-print_r($listdata);
+//print_r($listdata);
 echo '</pre>';
 require(ROOT . 'view/admin/templates/catelist.html');
 ?>

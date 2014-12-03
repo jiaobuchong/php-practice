@@ -602,3 +602,71 @@ DELETE FROM test WHERE id=:id
 UPDATE test SET username=:username,money=:money WHERE id=:id
 2014-11-27 13:36:28:      这是一次访问数据库。
 SELECT * FROM test WHERE username=:username AND id=:id
+2014-12-03 12:34:51:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-03 12:34:55:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-03 12:34:57:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-03 12:34:58:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-03 12:35:15:      这是一次访问数据库。
+INSERT INTO category (catename,intro,parent_id) VALUES(:catename,:intro,:parent_id)
+2014-12-03 12:35:18:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-03 12:35:20:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-03 12:35:25:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-12-03 12:35:25:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-03 12:46:22:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-03 12:47:42:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-12-03 12:47:42:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-03 12:48:28:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-03 12:48:29:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-03 12:48:31:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-03 12:49:20:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-03 12:49:29:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-03 12:49:48:      这是一次访问数据库。
+INSERT INTO category (catename,intro,parent_id) VALUES(:catename,:intro,:parent_id)
+2014-12-03 12:49:50:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-03 12:49:58:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-12-03 12:49:58:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-03 12:50:06:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-03 12:50:36:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-03 16:02:07:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-03 16:09:19:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-03 16:18:38:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-03 16:19:41:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-03 20:52:32:      这是一次访问数据库。
+INSERT INTO goods (goods_name,goods_sn,cat_id,shop_price,market_price,goods_desc,goods_weight,goods_number,is_best,is_new,is_hot,is_on_sale,keywords,goods_brief,seller_note,add_time) VALUES(:goods_name,:goods_sn,:cat_id,:shop_price,:market_price,:goods_desc,:goods_weight,:goods_number,:is_best,:is_new,:is_hot,:is_on_sale,:keywords,:goods_brief,:seller_note,:add_time)
+2014-12-03 20:52:32:      数据库执行SQL出错。INSERT INTO goods (goods_name,goods_sn,cat_id,shop_price,market_price,goods_desc,goods_weight,goods_number,is_best,is_new,is_hot,is_on_sale,keywords,goods_brief,seller_note,add_time) VALUES(:goods_name,:goods_sn,:cat_id,:shop_price,:market_price,:goods_desc,:goods_weight,:goods_number,:is_best,:is_new,:is_hot,:is_on_sale,:keywords,:goods_brief,:seller_note,:add_time) SQLSTATE[42S22]: Column not found: 1054 Unknown column 'keywords' in 'field list'
+2014-12-03 20:53:06:      这是一次访问数据库。
+INSERT INTO goods (goods_name,goods_sn,cat_id,shop_price,market_price,goods_desc,goods_weight,goods_number,is_best,is_new,is_hot,is_on_sale,keywords,goods_brief,seller_note,add_time) VALUES(:goods_name,:goods_sn,:cat_id,:shop_price,:market_price,:goods_desc,:goods_weight,:goods_number,:is_best,:is_new,:is_hot,:is_on_sale,:keywords,:goods_brief,:seller_note,:add_time)
+2014-12-03 20:53:06:      数据库执行SQL出错。INSERT INTO goods (goods_name,goods_sn,cat_id,shop_price,market_price,goods_desc,goods_weight,goods_number,is_best,is_new,is_hot,is_on_sale,keywords,goods_brief,seller_note,add_time) VALUES(:goods_name,:goods_sn,:cat_id,:shop_price,:market_price,:goods_desc,:goods_weight,:goods_number,:is_best,:is_new,:is_hot,:is_on_sale,:keywords,:goods_brief,:seller_note,:add_time) SQLSTATE[42S22]: Column not found: 1054 Unknown column 'keywords' in 'field list'
+2014-12-03 20:54:41:      这是一次访问数据库。
+INSERT INTO goods (goods_name,goods_sn,cat_id,shop_price,market_price,goods_desc,goods_weight,goods_number,is_best,is_new,is_hot,is_on_sale,keywords,goods_brief,seller_note,add_time) VALUES(:goods_name,:goods_sn,:cat_id,:shop_price,:market_price,:goods_desc,:goods_weight,:goods_number,:is_best,:is_new,:is_hot,:is_on_sale,:keywords,:goods_brief,:seller_note,:add_time)
+2014-12-03 20:54:41:      数据库执行SQL出错。INSERT INTO goods (goods_name,goods_sn,cat_id,shop_price,market_price,goods_desc,goods_weight,goods_number,is_best,is_new,is_hot,is_on_sale,keywords,goods_brief,seller_note,add_time) VALUES(:goods_name,:goods_sn,:cat_id,:shop_price,:market_price,:goods_desc,:goods_weight,:goods_number,:is_best,:is_new,:is_hot,:is_on_sale,:keywords,:goods_brief,:seller_note,:add_time) SQLSTATE[42S22]: Column not found: 1054 Unknown column 'keywords' in 'field list'
+2014-12-03 21:00:12:      这是一次访问数据库。
+INSERT INTO goods (goods_name,goods_sn,cat_id,shop_price,market_price,goods_desc,goods_weight,goods_number,is_best,is_new,is_hot,is_on_sale,keywords,goods_brief,seller_note,add_time) VALUES(:goods_name,:goods_sn,:cat_id,:shop_price,:market_price,:goods_desc,:goods_weight,:goods_number,:is_best,:is_new,:is_hot,:is_on_sale,:keywords,:goods_brief,:seller_note,:add_time)
+2014-12-03 21:00:12:      数据库执行SQL出错。INSERT INTO goods (goods_name,goods_sn,cat_id,shop_price,market_price,goods_desc,goods_weight,goods_number,is_best,is_new,is_hot,is_on_sale,keywords,goods_brief,seller_note,add_time) VALUES(:goods_name,:goods_sn,:cat_id,:shop_price,:market_price,:goods_desc,:goods_weight,:goods_number,:is_best,:is_new,:is_hot,:is_on_sale,:keywords,:goods_brief,:seller_note,:add_time) SQLSTATE[42S22]: Column not found: 1054 Unknown column 'seller_note' in 'field list'
+2014-12-03 21:02:14:      这是一次访问数据库。
+INSERT INTO goods (goods_name,goods_sn,cat_id,shop_price,market_price,goods_desc,goods_weight,goods_number,is_best,is_new,is_hot,is_on_sale,keywords,goods_brief,add_time) VALUES(:goods_name,:goods_sn,:cat_id,:shop_price,:market_price,:goods_desc,:goods_weight,:goods_number,:is_best,:is_new,:is_hot,:is_on_sale,:keywords,:goods_brief,:add_time)

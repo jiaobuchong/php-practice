@@ -52,6 +52,7 @@ if (!$flag)
     exit();
 }
 
+echo '<br />';
 //执行修改
 if ($cate->update($data))
 {

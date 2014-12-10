@@ -2,25 +2,19 @@
 class CategoryModel extends Model
 {
     protected $table = 'category';
-    protected $listdata;
+    protected $pk = 'id';  //category表的主键
+    public $listdata;
+
     
-    /*$data 包含数据的键值对如array('id'=>1, 'name'=>'jack')
-      然后add()方法将数据插入到数据库中  
-    */ 
-    public function add($data)
-    {
-        //返回值为受影响的行数
-        return $this->db->query('insert', $this->table, $data);
-    }
 
     /*查询栏目列表*/
-    public function select()
+/*    public function select()
     {
         $sql = 'SELECT id, catename, intro, parent_id FROM ' . $this->table . ' ORDER BY id ASC';
         $this->listdata = $this->db->getAll($sql);
         return $this->listdata;
     } 
-
+*/
     /*
     getCatTree
     param int id
@@ -41,33 +35,16 @@ class CategoryModel extends Model
         return $subs;
     }
 
-    /*删除栏目*/
-    public function delete($id)
-    {
-        return $this->db->query('delete', $this->table, array('id'=>$id));
-    } 
-
-    /*根据主键id，取出一行数据*/
-    public function find($id)
-    {
-        $sql = 'SELECT id, catename, intro, parent_id FROM ' . $this->table . ' WHERE id = :id';
-        return $this->db->single($sql, array('id' => $id)); 
-    } 
-
-    /*根据id修改栏目数据*/
-    public function update($data)
-    {
-         return $this->db->query('update', $this->table, $data);
-    } 
-
     /*寻找子栏目
     param: int $id
     return array $id 栏目的子孙树
     */
     public function getSon($id)
     {
-        $sql = 'select catename, intro, parent_id from ' . $this->table . ' where parent_id = :id';
-        return $this->db->single($sql, array('id'=>$id));
+        $fieldVal = array('catename', 'intro', 'parent_id');
+        $condition = 'WHERE parent_id = :id';
+        $data = array('id' => $id);
+        return $this->select($fieldVal, $condition, $data);
     }
      
     /*寻找家谱树
@@ -76,7 +53,7 @@ class CategoryModel extends Model
     */
     public function getFatherTree($id = 0)
     {
-        $this->select();
+        $this->listdata = $this->select();
         $tree = array();
 
         //迭代寻找家谱树

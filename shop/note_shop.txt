@@ -82,5 +82,7 @@ CREATE TABLE IF NOT EXISTS `goods` (
 合理的字段就是表中的列名对应的字段。
 如表中有goods_id, goods_name, goods_desc,则会自动把POST里的这几个字段拿出来
 2、CategoryModel里和GoodsModel里都有一个add方法，重复了，如何解决。
+   在model父类里，写最基本的增删改查操作
+   然后其他model直接继承这个model即可
 3、能否对这些字段的合法性也能自动判断。
 

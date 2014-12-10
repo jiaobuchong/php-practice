@@ -670,3 +670,565 @@ INSERT INTO goods (goods_name,goods_sn,cat_id,shop_price,market_price,goods_desc
 2014-12-03 21:00:12:      数据库执行SQL出错。INSERT INTO goods (goods_name,goods_sn,cat_id,shop_price,market_price,goods_desc,goods_weight,goods_number,is_best,is_new,is_hot,is_on_sale,keywords,goods_brief,seller_note,add_time) VALUES(:goods_name,:goods_sn,:cat_id,:shop_price,:market_price,:goods_desc,:goods_weight,:goods_number,:is_best,:is_new,:is_hot,:is_on_sale,:keywords,:goods_brief,:seller_note,:add_time) SQLSTATE[42S22]: Column not found: 1054 Unknown column 'seller_note' in 'field list'
 2014-12-03 21:02:14:      这是一次访问数据库。
 INSERT INTO goods (goods_name,goods_sn,cat_id,shop_price,market_price,goods_desc,goods_weight,goods_number,is_best,is_new,is_hot,is_on_sale,keywords,goods_brief,add_time) VALUES(:goods_name,:goods_sn,:cat_id,:shop_price,:market_price,:goods_desc,:goods_weight,:goods_number,:is_best,:is_new,:is_hot,:is_on_sale,:keywords,:goods_brief,:add_time)
+2014-12-07 16:33:32:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-07 16:33:35:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-07 16:33:39:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-07 16:33:42:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-07 16:33:58:      这是一次访问数据库。
+INSERT INTO category (catename,intro,parent_id) VALUES(:catename,:intro,:parent_id)
+2014-12-07 16:34:01:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-07 16:34:08:      这是一次访问数据库。
+select catename, intro, parent_id from category where parent_id = :id
+2014-12-07 16:34:08:      这是一次访问数据库。
+DELETE FROM category WHERE id=:id
+2014-12-07 16:34:10:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-07 16:34:12:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-07 16:34:28:      这是一次访问数据库。
+INSERT INTO category (catename,intro,parent_id) VALUES(:catename,:intro,:parent_id)
+2014-12-07 16:34:30:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-07 17:32:13:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-07 17:32:15:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-07 17:32:17:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-07 17:32:38:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-07 17:32:40:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-07 17:32:45:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category WHERE id = :id
+2014-12-07 17:32:45:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-07 17:33:23:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-07 17:33:24:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-07 17:33:24:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-07 17:33:25:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-07 17:33:25:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-07 17:33:28:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-07 17:33:49:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-07 17:34:08:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-07 17:34:09:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-07 17:34:09:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-07 17:34:09:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-07 17:34:13:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-07 17:34:46:      这是一次访问数据库。
+SELECT id, catename, intro, parent_id FROM category ORDER BY id ASC
+2014-12-07 20:14:26:      这是一次访问数据库。
+SELECT  FROM category 
+2014-12-07 20:14:26:      数据库执行SQL出错。SELECT  FROM category  SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM category' at line 1
+2014-12-07 20:15:36:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:15:38:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:25:34:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:25:55:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:26:06:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:26:09:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:26:12:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:26:43:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:27:11:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:29:21:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:32:13:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:34:54:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:36:08:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:37:13:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:37:56:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:37:57:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:37:57:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:37:57:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:37:57:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:37:58:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:37:58:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:37:58:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:38:01:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:38:01:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:38:02:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:38:02:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:38:02:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:38:02:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:38:03:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:38:03:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:38:04:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:38:04:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:38:04:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:38:52:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:39:52:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:41:30:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:41:52:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:42:31:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:42:54:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:43:15:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:45:00:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:47:58:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:48:26:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:49:32:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:50:25:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:51:16:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:51:58:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:52:33:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:52:34:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:52:34:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:52:35:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:52:35:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:52:35:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:52:35:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:53:37:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:54:22:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:54:22:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:58:57:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:59:22:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 20:59:24:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 21:00:11:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 21:01:47:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 21:01:49:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 21:03:24:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 21:03:50:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 21:03:51:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 21:06:10:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 21:06:21:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 21:06:37:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 21:06:38:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 21:06:42:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 21:06:44:      这是一次访问数据库。
+SELECT  FROM category 
+2014-12-07 21:06:44:      数据库执行SQL出错。SELECT  FROM category  SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM category' at line 1
+2014-12-07 21:06:51:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 21:06:52:      这是一次访问数据库。
+SELECT  FROM category 
+2014-12-07 21:06:52:      数据库执行SQL出错。SELECT  FROM category  SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM category' at line 1
+2014-12-07 21:06:56:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 21:08:43:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 21:08:44:      这是一次访问数据库。
+SELECT  FROM category 
+2014-12-07 21:08:44:      数据库执行SQL出错。SELECT  FROM category  SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM category' at line 1
+2014-12-07 21:08:47:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 21:08:48:      这是一次访问数据库。
+SELECT  FROM category 
+2014-12-07 21:08:48:      数据库执行SQL出错。SELECT  FROM category  SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM category' at line 1
+2014-12-07 21:08:51:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 21:08:52:      这是一次访问数据库。
+SELECT  FROM category 
+2014-12-07 21:08:52:      数据库执行SQL出错。SELECT  FROM category  SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM category' at line 1
+2014-12-07 21:09:37:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 21:09:38:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 21:09:59:      这是一次访问数据库。
+INSERT INTO category (catename,intro,parent_id) VALUES(:catename,:intro,:parent_id)
+2014-12-07 21:10:03:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 21:10:11:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 21:18:37:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 21:18:39:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 21:18:43:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 21:18:46:      这是一次访问数据库。
+SELECT  FROM Array 
+2014-12-07 21:18:46:      数据库执行SQL出错。SELECT  FROM Array  SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'FROM Array' at line 1
+2014-12-07 21:19:08:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-07 21:19:10:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-08 09:40:08:      这是一次访问数据库。
+SELECT * FROM category WHERE id=:id
+2014-12-08 16:16:59:      这是一次访问数据库。
+INSERT INTO test (username,money) VALUES(:username,:money)
+2014-12-08 16:16:59:      这是一次访问数据库。
+DELETE FROM test WHERE id=:id
+2014-12-08 16:16:59:      这是一次访问数据库。
+UPDATE test SET username=:username,money=:money WHERE id=:id
+2014-12-09 17:18:23:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 17:58:54:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 18:07:56:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 18:07:59:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 18:08:05:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 18:08:06:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 18:09:45:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-09 18:09:45:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-09 18:09:45:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-09 18:09:46:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-09 18:09:53:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-09 18:10:46:      这是一次访问数据库。
+INSERT INTO category (catename,intro,parent_id) VALUES(:catename,:intro,:parent_id)
+2014-12-09 18:10:56:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 18:11:17:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 18:11:18:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-09 18:11:24:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 18:11:30:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-09 18:11:40:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 18:11:42:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-09 18:11:43:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 18:18:50:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 18:19:13:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 18:19:55:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 18:21:45:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 18:23:56:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 18:23:59:      这是一次访问数据库。
+SELECT * FROM category WHERE id=:id
+2014-12-09 18:23:59:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-09 18:24:05:      这是一次访问数据库。
+SELECT * FROM category WHERE id=:id
+2014-12-09 18:24:05:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-09 18:39:21:      这是一次访问数据库。
+SELECT * FROM category WHERE id=:id
+2014-12-09 18:39:21:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-09 18:39:33:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-09 18:42:59:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-09 18:42:59:      这是一次访问数据库。
+UPDATE category SET catename=:catename,intro=:intro,parent_id=:parent_id WHERE id=:id
+2014-12-09 18:43:09:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 18:43:14:      这是一次访问数据库。
+SELECT * FROM category WHERE id=:id
+2014-12-09 18:43:14:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-09 18:43:19:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-09 18:43:19:      这是一次访问数据库。
+UPDATE category SET catename=:catename,intro=:intro,parent_id=:parent_id WHERE id=:id
+2014-12-09 18:45:10:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 18:45:16:      这是一次访问数据库。
+SELECT * FROM category WHERE id=:id
+2014-12-09 18:45:16:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-09 18:47:37:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-09 18:47:37:      这是一次访问数据库。
+UPDATE category SET catename=:catename,intro=:intro,parent_id=:parent_id WHERE id=:id
+2014-12-09 18:47:43:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 18:48:01:      这是一次访问数据库。
+SELECT * FROM category WHERE id=:id
+2014-12-09 18:48:01:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-09 18:48:03:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-09 18:48:03:      这是一次访问数据库。
+UPDATE category SET catename=:catename,intro=:intro,parent_id=:parent_id WHERE id=:id
+2014-12-09 18:48:27:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 18:48:40:      这是一次访问数据库。
+SELECT * FROM category WHERE id=:id
+2014-12-09 18:48:40:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-09 18:48:55:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-09 18:48:55:      这是一次访问数据库。
+UPDATE category SET catename=:catename,intro=:intro,parent_id=:parent_id WHERE id=:id
+2014-12-09 18:55:52:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 18:55:55:      这是一次访问数据库。
+SELECT * FROM select catename, intro, parent_id from category where parent_id = :id WHERE id=:id
+2014-12-09 18:55:55:      数据库执行SQL出错。SELECT * FROM select catename, intro, parent_id from category where parent_id = :id WHERE id=:id SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select catename, intro, parent_id from category where parent_id = ? WHERE id=?' at line 1
+2014-12-09 18:56:06:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 19:05:00:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 19:06:47:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 19:06:51:      这是一次访问数据库。
+SELECT catename,intro,parent_id FROM category WHERE parent_id = :id
+2014-12-09 19:06:57:      这是一次访问数据库。
+SELECT catename,intro,parent_id FROM category WHERE parent_id = :id
+2014-12-09 19:06:57:      这是一次访问数据库。
+DELETE FROM category WHERE 0=:0
+2014-12-09 19:07:03:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 19:07:06:      这是一次访问数据库。
+SELECT catename,intro,parent_id FROM category WHERE parent_id = :id
+2014-12-09 19:07:06:      这是一次访问数据库。
+DELETE FROM category WHERE 0=:0
+2014-12-09 19:10:04:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 19:10:09:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 19:10:11:      这是一次访问数据库。
+SELECT catename,intro,parent_id FROM category WHERE parent_id = :id
+2014-12-09 19:10:11:      这是一次访问数据库。
+DELETE FROM category WHERE id=:id
+2014-12-09 19:10:13:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 19:10:34:      这是一次访问数据库。
+SELECT catename,intro,parent_id FROM category WHERE parent_id = :id
+2014-12-09 19:10:50:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 19:10:55:      这是一次访问数据库。
+SELECT catename,intro,parent_id FROM category WHERE parent_id = :id
+2014-12-09 19:10:55:      这是一次访问数据库。
+DELETE FROM category WHERE id=:id
+2014-12-09 19:12:05:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 19:12:09:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-09 19:12:24:      这是一次访问数据库。
+INSERT INTO category (catename,intro,parent_id) VALUES(:catename,:intro,:parent_id)
+2014-12-09 19:12:26:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 19:12:32:      这是一次访问数据库。
+SELECT catename,intro,parent_id FROM category WHERE parent_id = :id
+2014-12-09 19:12:32:      这是一次访问数据库。
+DELETE FROM category WHERE id=:id
+2014-12-09 19:12:34:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 19:12:39:      这是一次访问数据库。
+SELECT * FROM category WHERE id=:id
+2014-12-09 19:12:39:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-09 19:12:48:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-09 19:12:48:      这是一次访问数据库。
+UPDATE category SET catename=:catename,intro=:intro,parent_id=:parent_id WHERE id=:id
+2014-12-09 19:12:51:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 19:13:00:      这是一次访问数据库。
+SELECT * FROM category WHERE id=:id
+2014-12-09 19:13:00:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-09 19:13:04:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-09 19:13:18:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 19:36:18:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 19:36:22:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 19:36:25:      这是一次访问数据库。
+SELECT catename,intro,parent_id FROM category WHERE parent_id = :id
+2014-12-09 19:36:25:      这是一次访问数据库。
+DELETE FROM category WHERE id=:id
+2014-12-09 19:36:27:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 19:38:51:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-09 19:38:52:      这是一次访问数据库。
+SELECT * FROM category WHERE id=:id
+2014-12-09 19:38:52:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-10 14:14:22:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-10 14:14:27:      这是一次访问数据库。
+SELECT * FROM category WHERE id=:id
+2014-12-10 14:14:27:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-10 14:14:32:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-10 14:14:32:      这是一次访问数据库。
+UPDATE category SET catename=:catename,intro=:intro,parent_id=:parent_id WHERE id=:id
+2014-12-10 14:14:34:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-10 14:14:39:      这是一次访问数据库。
+SELECT * FROM category WHERE id=:id
+2014-12-10 14:14:39:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-10 14:14:45:      这是一次访问数据库。
+INSERT INTO goods (goods_name,goods_sn,cat_id,shop_price,market_price,goods_desc,goods_weight,goods_number,is_best,is_new,is_hot,is_on_sale,keywords,goods_brief,add_time) VALUES(:goods_name,:goods_sn,:cat_id,:shop_price,:market_price,:goods_desc,:goods_weight,:goods_number,:is_best,:is_new,:is_hot,:is_on_sale,:keywords,:goods_brief,:add_time)
+2014-12-10 14:15:18:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-10 14:15:26:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-10 14:16:12:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-10 14:16:14:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-10 14:16:14:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-10 14:16:14:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-10 14:16:14:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-10 14:16:19:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-10 14:16:20:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-10 14:16:20:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-10 14:20:34:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-10 14:20:48:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-10 14:21:12:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-10 14:21:23:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-10 14:21:26:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-10 14:21:27:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-10 14:21:28:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-10 14:21:29:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-10 14:22:17:      这是一次访问数据库。
+INSERT INTO goods (goods_name,goods_sn,cat_id,shop_price,market_price,goods_desc,goods_weight,goods_number,is_best,is_new,is_hot,is_on_sale,keywords,goods_brief,add_time) VALUES(:goods_name,:goods_sn,:cat_id,:shop_price,:market_price,:goods_desc,:goods_weight,:goods_number,:is_best,:is_new,:is_hot,:is_on_sale,:keywords,:goods_brief,:add_time)
+2014-12-10 14:26:58:      这是一次访问数据库。
+SELECT * FROM goods
+2014-12-10 14:27:11:      这是一次访问数据库。
+SELECT * FROM goods
+2014-12-10 14:27:32:      这是一次访问数据库。
+SELECT * FROM goods
+2014-12-10 14:27:42:      这是一次访问数据库。
+SELECT * FROM goods
+2014-12-10 14:33:25:      这是一次访问数据库。
+SELECT * FROM goods
+2014-12-10 14:33:28:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-10 14:33:31:      这是一次访问数据库。
+SELECT * FROM goods
+2014-12-10 14:33:44:      这是一次访问数据库。
+SELECT * FROM goods
+2014-12-10 14:37:10:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-10 14:37:12:      这是一次访问数据库。
+SELECT * FROM goods
+2014-12-10 14:46:53:      这是一次访问数据库。
+SELECT * FROM goods WHERE goods_id=:goods_id
+2014-12-10 14:51:41:      这是一次访问数据库。
+SELECT * FROM goods
+2014-12-10 14:54:26:      这是一次访问数据库。
+SELECT * FROM goods
+2014-12-10 14:54:27:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-10 14:54:28:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-10 14:54:37:      这是一次访问数据库。
+SELECT * FROM goods
+2014-12-10 14:54:38:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-10 14:54:39:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-10 14:54:40:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-10 14:54:41:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-10 14:54:45:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-10 14:54:50:      这是一次访问数据库。
+SELECT * FROM goods

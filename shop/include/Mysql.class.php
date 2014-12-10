@@ -198,28 +198,57 @@ class Mysql
         return $this->pdo->lastInsertId();
     } 
     
-    /*查询数据, 
-      $query     SELECT * FROM test WHERE firstname = :firstname AND id = :id
-      $data      array('firstname'=>'jack', 'id'=>1)
-    */
-    public function getAll($query, $data = array(), $fetchmode=PDO::FETCH_ASSOC)
+    /**查询数据
+     * param array $fieldVal    数据库表的字段值
+     * param string $table 数据库表名
+     * param string $condition  查询时的条件  'order by id desc' or 'where firstname=:firstname and id = :id' 
+     * param array $data   当你有第二个参数条件时，$data就必须有了, 如：array('firstname'=>'jack', 'id'=>1)
+     * param const $fetchmode 取数据的模式
+     **/
+    public function getAll($fieldVal = array(), $table = '', $condition = '', $data = array(), $fetchmode = PDO::FETCH_ASSOC)
     {
-        $this->parameters = $this->bindMore($data);
+        if (!empty($data))
+        {
+            $this->parameters = $this->bindMore($data);
+        }
+        $query = $this->autoSelectSql($fieldVal, $table, $condition);  //生成select的SQL语句
         $this->init($query);
         return $this->stmt->fetchAll($fetchmode);
     }
 
     /* 查询一条数据
-      $query     SELECT * FROM test WHERE firstname = :firstname AND id = :id
-      $data      array('firstname'=>'jack', 'id'=>1)
-    
+       param string $table 数据库表名
+       param array $data  
     */
-    public function single($query, $data, $fetchmode = PDO::FETCH_ASSOC)
+    public function single($table = '', $data = array(), $fetchmode = PDO::FETCH_ASSOC)
     {
         $this->parameters = $this->bindMore($data);
+
+        //生成query 
+        $primaKey = implode('', array_keys($data));
+        $query = 'SELECT * FROM ' . $table . ' WHERE ' . $primaKey . '=:' . $primaKey;
         $this->init($query);
         return $this->stmt->fetch($fetchmode);
     }
+
+    /** 专生成select的SQL语句
+     * param array $fieldVal
+     * param string $condition
+     * return tring $sql
+     **/
+     protected function autoSelectSql($fieldVal = array(), $table, $condition = '')
+     {
+        $sql = '';
+        if (empty($fieldVal))
+        {
+            $sql .= 'SELECT * FROM ' . $table;
+        }
+        else
+        {
+            $sql .= 'SELECT ' . implode(',', $fieldVal) . ' FROM ' . $table . ' ' . $condition;
+        }
+        return $sql;
+     }
     
     //析构函数
     public function __destruct()

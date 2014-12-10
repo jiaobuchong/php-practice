@@ -8,7 +8,6 @@ defined('ACC') || exit("This file is denied!");
 define('ROOT', str_replace('\\', '/', dirname(dirname(__FILE__))) . '/');
 define('DEBUG', true);
 
-require(ROOT . 'include/lib_base.php');
 
 //自动加载类
 function __autoload($class)
@@ -22,6 +21,9 @@ function __autoload($class)
         require(ROOT . 'include/' . $class . '.class.php');
     }
 }
+
+require(ROOT . 'include/lib_base.php');
+require(ROOT . 'include/function.php');
 
 //过滤参数，用递归的方式过滤$_GET, $_POST, $_COOKIE
 $_GET = _addslashes($_GET);

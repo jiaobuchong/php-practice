@@ -7,7 +7,7 @@ $catelist = new CategoryModel();
 $cateinfo = $catelist->find($id); 
 
 //把栏目的数据取出来
-$catelist->select();
+$catelist->listdata = $catelist->select();
 //获得排序后的栏目
 $listdata = $catelist->getCatTree();
 

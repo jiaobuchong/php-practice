@@ -1,28 +1,32 @@
 <?php
-    class Test
+header('Content-Type:text/html;charset=utf8');
+define('ACC', true);
+require('./include/init.php');
+/*$db = Mysql::getIns();
+$db->single('category', array('id'=>123));
+*/
+function getVariableName($var, $scope)
+{
+    $name = array_search($var, $scope, true);
+    return $name;
+}
+function test($id = 3)
+{
+    echo getVariableName($id, get_defined_vars());
+}
+//test();
+class Test
+{
+    public function go()
     {
-        public $pa;
-        public function __construct()
-        {
-            var_dump(empty($this->pa));
-        }
+        $a = 123;
+        return getVariableName($a, get_defined_vars());
     }
-$p = new Test();
-
-        $parray = array('id'=>1, 'name'=>'jack');
-        $arr = array();
-        if (is_array($parray))
-        {
-            $i = 0;
-            foreach($parray as $key => $values)
-            {
-                $newKey = ':' . $key;  //新的key值
-                $arr[$newKey] = $values;
-            } 
-        }
-print_r($arr);   
-
-$arr1 = array('sex'=>'male', 'height'=>123);
-echo implode(' and ', $arr1);
-echo implode(',', array_keys($arr1));
-?> 
+}
+$a  = 2;
+$ss = new Test();
+echo $ss->go();
+echo '<pre>';
+print_r($GLOBALS);
+echo '</pre>';
+?>

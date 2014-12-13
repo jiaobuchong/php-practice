@@ -241,7 +241,7 @@ class Mysql
         $sql = '';
         if (empty($fieldVal))
         {
-            $sql .= 'SELECT * FROM ' . $table;
+            $sql .= 'SELECT * FROM ' . $table . ' ' . $condition;
         }
         else
         {

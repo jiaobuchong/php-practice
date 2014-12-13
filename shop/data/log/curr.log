@@ -1232,3 +1232,62 @@ SELECT id,catename,intro,parent_id FROM category
 SELECT * FROM category
 2014-12-10 14:54:50:      这是一次访问数据库。
 SELECT * FROM goods
+2014-12-12 18:57:23:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-12 18:57:23:      这是一次访问数据库。
+SELECT * FROM goods
+2014-12-12 18:57:26:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-12 18:57:29:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-12 18:57:30:      这是一次访问数据库。
+SELECT * FROM goods
+2014-12-12 18:57:53:      这是一次访问数据库。
+SELECT * FROM goods
+2014-12-12 18:57:54:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-12 18:57:57:      这是一次访问数据库。
+SELECT * FROM goods
+2014-12-12 18:58:00:      这是一次访问数据库。
+SELECT * FROM goods
+2014-12-12 18:59:24:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-12 18:59:31:      这是一次访问数据库。
+SELECT * FROM goods
+2014-12-12 19:16:54:      这是一次访问数据库。
+SELECT * FROM goods WHERE goods_id=:goods_id
+2014-12-12 19:17:03:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-12 19:17:04:      这是一次访问数据库。
+SELECT * FROM goods
+2014-12-12 19:29:30:      这是一次访问数据库。
+SELECT * FROM goods
+2014-12-12 19:35:09:      这是一次访问数据库。
+SELECT * FROM goods
+2014-12-12 19:35:11:      这是一次访问数据库。
+UPDATE goods SET is_delete=:is_delete WHERE =:
+2014-12-12 19:35:11:      数据库执行SQL出错。UPDATE goods SET is_delete=:is_delete WHERE =: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '=:' at line 1
+2014-12-12 19:35:36:      这是一次访问数据库。
+SELECT * FROM goods
+2014-12-12 19:35:37:      这是一次访问数据库。
+UPDATE goods SET is_delete=:is_delete WHERE goods_id=:goods_id
+2014-12-12 19:37:17:      这是一次访问数据库。
+SELECT * FROM category
+2014-12-12 19:37:19:      这是一次访问数据库。
+SELECT * FROM goods
+2014-12-12 19:44:28:      这是一次访问数据库。
+SELECT * FROM goods WHERE is_delete = :is_delete
+2014-12-12 19:44:30:      这是一次访问数据库。
+SELECT * FROM goods WHERE is_delete = :is_delete
+2014-12-12 19:44:38:      这是一次访问数据库。
+UPDATE goods SET is_delete=:is_delete WHERE goods_id=:goods_id
+2014-12-12 19:44:40:      这是一次访问数据库。
+SELECT * FROM goods WHERE is_delete = :is_delete
+2014-12-12 20:00:49:      这是一次访问数据库。
+SELECT * FROM goods WHERE is_delete = :is_delete
+2014-12-12 20:01:22:      这是一次访问数据库。
+SELECT * FROM goods WHERE is_delete = :is_delete
+2014-12-12 20:01:28:      这是一次访问数据库。
+SELECT * FROM goods WHERE is_delete = :is_delete
+2014-12-12 20:01:32:      这是一次访问数据库。
+SELECT * FROM category 

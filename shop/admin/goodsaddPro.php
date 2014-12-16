@@ -29,7 +29,7 @@ Array
     [act] => insert
 )
 */
-$data = array();
+/*
 $data['goods_name'] = trim($_POST['goods_name']);
 $data['goods_sn'] = trim($_POST['goods_sn']);
 $data['cat_id'] = $_POST['cat_id'] + 0;
@@ -46,8 +46,23 @@ $data['keywords'] = trim($_POST['keywords']);
 $data['goods_brief'] = trim($_POST['goods_brief']);
 //$data['seller_note'] = trim($_POST['seller_note']);
 $data['add_time'] = time();
-
+*/
+$data = array();
+$_POST['goods_weight'] *= $_POST['weight_unit'];   //克与千克的选择
+echo '<pre>';
+print_r($_POST);
 $goods = new GoodsModel();
+$data = $goods->_facade($_POST);   //自动过滤
+print_r($data);
+
+$data = $goods->_autofill($data);   //自动填充
+print_r($data);
+echo '</pre>';
+
+//自动验证
+$goods->_validate($data);
+print_r($goods->getErr());
+exit;
 if($goods->add($data))
 {
     echo 'Add goods success!';
@@ -56,7 +71,7 @@ else
 {
     echo 'Add goods failure!';
 }
-//print_r($data);
+//print_r($data); 
 
 
 

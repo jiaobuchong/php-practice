@@ -249,6 +249,14 @@ class Mysql
         }
         return $sql;
      }
+
+     //获得表的字段名
+     public function getFields($tableName)
+     {
+         $sql = 'desc ' . $tableName;
+         $this->init($sql);
+         return $this->stmt->fetchAll(PDO::FETCH_COLUMN);
+     }
     
     //析构函数
     public function __destruct()

@@ -2,9 +2,18 @@
 header('Content-Type:text/html;charset=utf8');
 define('ACC', true);
 require('./include/init.php');
-/*$db = Mysql::getIns();
-$db->single('category', array('id'=>123));
-*/
+$db = Mysql::getIns();
+//$db->single('category', array('id'=>123));
+$res  = $db->getFields('category');
+echo '<pre>';
+print_r($res);
+echo '</pre>';
+/*
+foreach($res as $row)
+{
+    echo $row;
+}*/
+/*
 function getVariableName($var, $scope)
 {
     $name = array_search($var, $scope, true);
@@ -29,4 +38,5 @@ echo $ss->go();
 echo '<pre>';
 print_r($GLOBALS);
 echo '</pre>';
+*/
 ?>

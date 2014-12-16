@@ -1291,3 +1291,149 @@ SELECT * FROM goods WHERE is_delete = :is_delete
 SELECT * FROM goods WHERE is_delete = :is_delete
 2014-12-12 20:01:32:      这是一次访问数据库。
 SELECT * FROM category 
+2014-12-15 20:05:25:      这是一次访问数据库。
+desc category
+2014-12-15 20:27:16:      这是一次访问数据库。
+desc category
+2014-12-15 20:32:22:      这是一次访问数据库。
+desc category
+2014-12-15 20:32:23:      这是一次访问数据库。
+desc category
+2014-12-15 20:32:23:      这是一次访问数据库。
+desc category
+2014-12-15 20:32:23:      这是一次访问数据库。
+desc category
+2014-12-15 20:32:23:      这是一次访问数据库。
+desc category
+2014-12-15 20:34:18:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-15 20:34:20:      这是一次访问数据库。
+SELECT * FROM category 
+2014-12-15 20:34:44:      这是一次访问数据库。
+INSERT INTO category (catename,intro,parent_id) VALUES(:catename,:intro,:parent_id)
+2014-12-15 20:34:47:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-15 20:34:47:      这是一次访问数据库。
+SELECT * FROM category 
+2014-12-15 20:34:53:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-15 20:39:01:      这是一次访问数据库。
+SELECT * FROM category 
+2014-12-15 20:40:11:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-15 20:40:15:      这是一次访问数据库。
+SELECT * FROM category 
+2014-12-15 20:40:16:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-15 20:40:19:      这是一次访问数据库。
+SELECT * FROM category 
+2014-12-15 20:40:21:      这是一次访问数据库。
+desc goods
+2014-12-15 20:40:59:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-15 20:41:00:      这是一次访问数据库。
+SELECT * FROM category 
+2014-12-15 20:41:01:      这是一次访问数据库。
+desc goods
+2014-12-15 20:48:10:      这是一次访问数据库。
+SELECT * FROM category 
+2014-12-15 20:50:43:      这是一次访问数据库。
+desc goods
+2014-12-15 20:51:14:      这是一次访问数据库。
+SELECT * FROM category 
+2014-12-15 20:51:19:      这是一次访问数据库。
+desc goods
+2014-12-15 23:43:22:      这是一次访问数据库。
+SELECT * FROM category 
+2014-12-15 23:43:25:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-15 23:43:27:      这是一次访问数据库。
+SELECT * FROM category 
+2014-12-15 23:43:30:      这是一次访问数据库。
+desc goods
+2014-12-15 23:43:58:      这是一次访问数据库。
+SELECT * FROM category 
+2014-12-15 23:44:00:      这是一次访问数据库。
+desc goods
+2014-12-15 23:47:00:      这是一次访问数据库。
+SELECT * FROM category 
+2014-12-15 23:47:02:      这是一次访问数据库。
+desc goods
+2014-12-15 23:47:32:      这是一次访问数据库。
+desc goods
+2014-12-15 23:47:45:      这是一次访问数据库。
+desc goods
+2014-12-15 23:48:24:      这是一次访问数据库。
+SELECT * FROM category 
+2014-12-15 23:48:53:      这是一次访问数据库。
+SELECT * FROM category 
+2014-12-15 23:48:54:      这是一次访问数据库。
+desc goods
+2014-12-15 23:51:20:      这是一次访问数据库。
+SELECT * FROM category 
+2014-12-15 23:52:05:      这是一次访问数据库。
+desc goods
+2014-12-15 23:52:05:      这是一次访问数据库。
+INSERT INTO goods (goods_name,goods_sn,cat_id,shop_price,market_price,goods_desc,goods_weight,goods_number,is_best,is_on_sale,keywords,goods_brief,goods_id,is_hot,is_new,add_time) VALUES(:goods_name,:goods_sn,:cat_id,:shop_price,:market_price,:goods_desc,:goods_weight,:goods_number,:is_best,:is_on_sale,:keywords,:goods_brief,:goods_id,:is_hot,:is_new,:add_time)
+2014-12-15 23:54:36:      这是一次访问数据库。
+SELECT * FROM goods WHERE is_delete = :is_delete
+2014-12-15 23:54:47:      这是一次访问数据库。
+SELECT * FROM goods WHERE is_delete = :is_delete
+2014-12-17 20:37:03:      这是一次访问数据库。
+SELECT * FROM category 
+2014-12-17 20:37:05:      这是一次访问数据库。
+desc goods
+2014-12-17 20:37:05:      这是一次访问数据库。
+INSERT INTO goods (goods_name,goods_sn,cat_id,shop_price,market_price,goods_desc,goods_weight,goods_number,is_on_sale,keywords,goods_brief,goods_id,is_hot,is_new,is_best,add_time) VALUES(:goods_name,:goods_sn,:cat_id,:shop_price,:market_price,:goods_desc,:goods_weight,:goods_number,:is_on_sale,:keywords,:goods_brief,:goods_id,:is_hot,:is_new,:is_best,:add_time)
+2014-12-17 20:37:05:      数据库执行SQL出错。INSERT INTO goods (goods_name,goods_sn,cat_id,shop_price,market_price,goods_desc,goods_weight,goods_number,is_on_sale,keywords,goods_brief,goods_id,is_hot,is_new,is_best,add_time) VALUES(:goods_name,:goods_sn,:cat_id,:shop_price,:market_price,:goods_desc,:goods_weight,:goods_number,:is_on_sale,:keywords,:goods_brief,:goods_id,:is_hot,:is_new,:is_best,:add_time) SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'goods_sn'
+2014-12-17 20:38:21:      这是一次访问数据库。
+SELECT * FROM goods WHERE is_delete = :is_delete
+2014-12-17 20:38:23:      这是一次访问数据库。
+SELECT id,catename,intro,parent_id FROM category 
+2014-12-17 20:38:27:      这是一次访问数据库。
+SELECT * FROM category 
+2014-12-17 20:38:28:      这是一次访问数据库。
+desc goods
+2014-12-17 20:38:28:      这是一次访问数据库。
+INSERT INTO goods (goods_name,goods_sn,cat_id,shop_price,market_price,goods_desc,goods_weight,goods_number,is_on_sale,keywords,goods_brief,goods_id,is_hot,is_new,is_best,add_time) VALUES(:goods_name,:goods_sn,:cat_id,:shop_price,:market_price,:goods_desc,:goods_weight,:goods_number,:is_on_sale,:keywords,:goods_brief,:goods_id,:is_hot,:is_new,:is_best,:add_time)
+2014-12-17 20:38:28:      数据库执行SQL出错。INSERT INTO goods (goods_name,goods_sn,cat_id,shop_price,market_price,goods_desc,goods_weight,goods_number,is_on_sale,keywords,goods_brief,goods_id,is_hot,is_new,is_best,add_time) VALUES(:goods_name,:goods_sn,:cat_id,:shop_price,:market_price,:goods_desc,:goods_weight,:goods_number,:is_on_sale,:keywords,:goods_brief,:goods_id,:is_hot,:is_new,:is_best,:add_time) SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'goods_sn'
+2014-12-16 11:09:31:      这是一次访问数据库。
+SELECT * FROM category 
+2014-12-16 11:09:35:      这是一次访问数据库。
+desc goods
+2014-12-16 11:10:09:      这是一次访问数据库。
+desc goods
+2014-12-16 11:10:18:      这是一次访问数据库。
+desc goods
+2014-12-16 11:11:34:      这是一次访问数据库。
+desc goods
+2014-12-16 11:12:18:      这是一次访问数据库。
+SELECT * FROM category 
+2014-12-16 11:12:18:      这是一次访问数据库。
+SELECT * FROM category 
+2014-12-16 11:12:22:      这是一次访问数据库。
+SELECT * FROM category 
+2014-12-16 11:13:05:      这是一次访问数据库。
+desc goods
+2014-12-16 11:13:30:      这是一次访问数据库。
+desc goods
+2014-12-16 11:14:34:      这是一次访问数据库。
+SELECT * FROM category 
+2014-12-16 11:14:35:      这是一次访问数据库。
+SELECT * FROM category 
+2014-12-16 11:14:45:      这是一次访问数据库。
+desc goods
+2014-12-16 11:14:57:      这是一次访问数据库。
+desc goods
+2014-12-16 11:15:38:      这是一次访问数据库。
+SELECT * FROM category 
+2014-12-16 11:15:38:      这是一次访问数据库。
+SELECT * FROM category 
+2014-12-16 11:15:43:      这是一次访问数据库。
+desc goods
+2014-12-16 11:16:00:      这是一次访问数据库。
+desc goods
+2014-12-16 11:16:56:      这是一次访问数据库。
+desc goods
+2014-12-16 11:17:05:      这是一次访问数据库。
+desc goods

@@ -1,0 +1,24 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <title>Upload_view</title>
+    
+</head>
+<body>
+    <form enctype="multipart/form-data" action="upload.php" method="post">
+        <p>shopname:<input type="text" name="name" /></p>
+        <p>shopprice:<input type="text" name="price" /></p>
+        <p>shopnum:<input type="text" name="num" /></p>
+        <input type="hidden" name="MAX_FILE_SIZE" value="1000000" /></p>
+        <p>shoppic:<input type="file" name="spic[]" /></p>
+        <p>shoppic:<input type="file" name="spic[]" /></p>
+        <p>shoppic:<input type="file" name="spic[]" /></p>
+       <!-- 同时上传多个文件
+       <p>shoppic1:<input type="file" name="pic[]" /></p>
+        <p>shoppic2:<input type="file" name="pic[]" /></p> -->
+        <p><input type="submit" value="submit"></p>
+    </form>
+</body>
+</html>
+

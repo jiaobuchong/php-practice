@@ -1,0 +1,134 @@
+<input type="file" name="pic" />   file文件域没有默认值
+1、提交后，文件自动发到服务器上，形成一个临时文件
+2、在服务器上，只需要把临时文件移动到自己想要的位置就可以完成上传操作
+
+那这个临时文件在哪里？
+文件的其他信息，文件名、文件大小又在哪儿呢？
+php形成临时文件后，还会形成一个$_FILES超级全局数组。数组里保存着文件的临时地址，临时名称，大小等信息。
+读$_FILES
+
+enctype="multipart/form-data" 上传的编码信息说清楚，二进制信息
+文件大小字节 byte
+3、如何移动
+move_uploaded_file() 函数
+
+用户上传了图片，按照日期创建目录， /201211/16/xxxxx.jpg
+
+上传参数细节：
+Array
+(
+    [spic] => Array
+            (
+                [name] => Screenshot from 2014-11-02 14:26:37.png
+                [type] => image/png
+                [tmp_name] => /tmp/php8NVMjX
+                [error] => 0
+                [size] => 105979
+            )
+)
+Error Messages Explained:
+UPLOAD_ERR_OK
+Value: 0; There is no error, the file uploaded with success.
+
+UPLOAD_ERR_INI_SIZE
+Value: 1; The uploaded file exceeds the upload_max_filesize directive in php.ini.
+
+UPLOAD_ERR_FORM_SIZE
+Value: 2; The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form.
+
+UPLOAD_ERR_PARTIAL
+Value: 3; The uploaded file was only partially uploaded.
+
+UPLOAD_ERR_NO_FILE
+Value: 4; No file was uploaded.
+
+UPLOAD_ERR_NO_TMP_DIR
+Value: 6; Missing a temporary folder. Introduced in PHP 5.0.3.
+
+UPLOAD_ERR_CANT_WRITE
+Value: 7; Failed to write file to disk. Introduced in PHP 5.1.0.
+
+UPLOAD_ERR_EXTENSION
+Value: 8; A PHP extension stopped the file upload. PHP does not provide a way to ascertain which extension caused the file upload 
+to stop; examining the list of loaded extensions with phpinfo() may help. Introduced in PHP 5.2.0.)
+
+
+file_uploads = On
+
+Maximum size of POST data that PHP will accept,include uploading files
+post_max_size = 8M
+
+Maximum allowed size for uploaded files.针对单个文件
+upload_max_filesize = 2M
+
+upload_tmp_dir
+
+Maximum execution time of each script, in seconds
+max_execution_time
+
+
+<input type="file" name="pic" />   file文件域没有默认值
+如果name的名称是数组形式，如pic[], pic[]
+形成的数组与 name=a, name=b这种形式不同:
+Array
+(
+    [hotpic] => Array
+        (
+            [name] => download.jpg
+            [type] => image/jpeg
+            [tmp_name] => /tmp/php8NXX3e
+            [error] => 0
+            [size] => 195280
+        )
+
+    [avatar] => Array
+        (
+            [name] => Screenshot from 2014-12-22 14:40:16.png
+            [type] => image/png
+            [tmp_name] => /tmp/phprepVtd
+            [error] => 0
+            [size] => 95357
+        )
+
+)
+如下：name是pic[], 上传两张图片
+Array
+(
+    [pic] => Array
+        (
+            [name] => Array
+                (
+                    [0] => Screenshot from 2014-12-22 14:40:16.png
+                    [1] => download.jpg
+                )
+
+            [type] => Array
+                (
+                    [0] => image/png
+                    [1] => image/jpeg
+                )
+
+            [tmp_name] => Array
+                (
+                    [0] => /tmp/phpOjNk37
+                    [1] => /tmp/phpJqQBsZ
+                )
+
+            [error] => Array
+                (
+                    [0] => 0
+                    [1] => 0
+                )
+
+            [size] => Array
+                (
+                    [0] => 95357
+                    [1] => 195280
+                )
+
+        )
+
+)
+
+浏览器判断你的硬盘上的文件是不可以的，js是不允许的，html5放宽了一些接口，可以操作本地数据存储什么的
+ajax上也是做不到的

@@ -17,7 +17,9 @@ else
 */
 
 $pattern = '/^<[^>]+>$/';   //regular expression
-$string = '<table>';
+$pattern = '/(\d{4})-(\d{2})-(\d{2})/';   //regular expression
+$pattern = '/^([a-z])\1$/';   //regular expression
+$string = 'aa';
 if (preg_match($pattern, $string, $arr))
 {
     echo 'Matching well<br />';
@@ -27,6 +29,7 @@ if (preg_match($pattern, $string, $arr))
 }
 else
 {
+
     echo '<font color="red">Matching failure.</font><br />';
 }
 ?>

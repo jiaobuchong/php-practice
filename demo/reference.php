@@ -5,7 +5,7 @@ function ch_age($age) //引用传值 函数内部和外部 指向的是同一个
 {
     return ++$age;
 }
-echo ch_age(&$age);
+echo ch_gae(&$age);
 echo '<br />';
 echo $age;
 /*

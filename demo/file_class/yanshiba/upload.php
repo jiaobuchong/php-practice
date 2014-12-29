@@ -6,8 +6,10 @@ echo '<pre>';
 echo '</pre>';
 //$up = new FileUpload('./uploads', array('txt', 'jpg', 'gif', 'png'), 2000000, false);
 
-$up = new FileUpload(array('filepath'=>'./uploads/', 'maxsize'=>1000000, 'israndname'=>true));
-$res = $up->uploadFile('spic');
-
+$up = new FileUpload(array('filepath'=>'./uploads/', 'maxsize'=>10, 'israndname'=>true));
+$res = $up->uploadFile();
+var_dump(implode('', $up->getErrorMsg()));
+echo '<br />';
+var_dump(implode(',', $up->getNewFileName()));
 var_dump($res);
 ?>

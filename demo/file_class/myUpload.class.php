@@ -1,7 +1,6 @@
 <?php
 class FileUpload
 {
-    private $filepath; //文件上传路径
     private $allowType = array('gif', 'jpg', 'jpeg', 'png'); //允许的文件类型
     private $maxsize = 1000000;  //允许上传文件的最大尺寸
     private $israndname = true; //是否随机重命名文件名
@@ -11,19 +10,18 @@ class FileUpload
     private $fileSize;  //文件大小
     private $newFileName; //新的文件名
     private $errorNum = 0; //错误号
-    private $errorMsg = ''; //用来提供错误报告
+    private $errorMsg = array(); //用来提供错误报告
+    private $filepath; //文件上传路径
 
     /**
-     *用于对上传文件初始化
-     *1、上传路径 2、允许路径 3、限制大小 4、是否使用随机文件名 
-     *用户不用按位置传参数, 在new对象时构造函数中后面参数给值，前面不用给
+     *构造函数，传参时($path, $maxsize, $israndname, $allowType)
+     *如: array('filepath'=>'./uploads', 'maxsize'=>'1000000')
+     *1、上传路径 2、限制大小 3、是否使用随机文件名 4、允许的上传类型
      *所以按数组来传递参数
+     *@param array $options 数组键值为类FileUpload属性名，值为具体的值
      **/
     public function __construct($options = array())
     {
-        //get_class_vars() 返回类的属性
-        //如array('filepath'=>'./uploads', 'maxsize'=>'1000000')
-        //array_keys(), 返回类中的属性名
         $arr = array_keys(get_class_vars(get_class($this)));
         foreach ($options as $key => $value)
         {
@@ -61,7 +59,7 @@ class FileUpload
                 $str .= '上传的文件超过了php.ini中upload_max_filesize选项限制的值。';
                 break;
             case -1:
-                $str .= '不允许的类型。';
+                $str .= '不允许的文件扩展名类型。';
                 break;
             case -2:
                 $str .= "文件过大，上传文件不能超过{$this->maxsize}个字节。";
@@ -70,10 +68,7 @@ class FileUpload
                 $str .= '上传失败。';
                 break;
             case -4:
-                $str .= '建立存放上传目录失败，请重新指定上传目录。';
-                break;
-            case -5:
-                $str .= '必须指定上传文件的路径。';
+                $str .= '指定的上传目录不存在或者指定目录没有写的权限。';
                 break;
            default: 
                $str .= '未知错误。';
@@ -87,33 +82,22 @@ class FileUpload
         **/
     private function checkFilePath()
     {
-        //如果没有指定文件名
-        if (empty($this->filepath)) // 判断路径是否为空
+        if (file_exists($this->filepath) && is_writable($this->filepath)) // 判断上传文件夹是否存在或可写
         {
-            $this->setOption('errorNum', -5);
+            return true;
+        }
+        else
+        {
             return false;
         }
-
-        //如果指定的文件名不存在，或不可写
-        if (!file_exists($this->filepath) || !is_writable($this->filepath))
-        {
-            //如果不成功
-            if (!@mkdir($this->filepath, 0755))
-            {
-                $this->setOption('errorNum', -4);
-                return false;
-            }
-        }
-        return true;
     }
   /**
-   * 检查文件大小
+   * 检查文件大小,用户指定的文件大小
    **/
     private function checkFileSize()
     {
         if ($this->fileSize > $this->maxsize)
         {
-            $this->setOption('errorNum', '-2');
             return false;
         }
         else
@@ -134,7 +118,6 @@ class FileUpload
         }
         else
         {
-            $this->setOption('errorNum', -1);
             return false;
         }
     }
@@ -144,7 +127,7 @@ class FileUpload
      **/
     private function proRandName()
     {
-        $newFileName = date('YmdHis') . rand(1000, 9999) . '.' . $this->fileType;
+        $newFileName = date('YmdHis') . '_' . mt_rand(1000, 9999) . '.' . $this->fileType;
         return $newFileName;
     }
 
@@ -170,27 +153,45 @@ class FileUpload
      **/
     private function setFiles($name='', $tmp_name='', $size=0, $error=0)
     {
-       //检查文件类型优先
-        $this->setOption('originName', $name);
-         //获取文件后缀名，并将其转化为小写
-        $arrStr = explode('.', $name);
-        $this->setOption('fileType', strtolower($arrStr[count($arrStr) - 1]));   //后缀名
-        
-        //检查文件类型
-        if (!$this->checkFileType())
+        //1、如果上传的文件本身出错
+        if ($error)
         {
+            $this->assignErrorInfo($error);
             return false;
         }
 
-        $this->setOption('errorNum', $error);
-        if ($error)
+       $flag1 = true;   //对应文件扩展名
+       $flag2 = true;   //对应文件大小
+       $this->setOption('tmpFileName', $tmp_name);
+
+       //2、检查文件扩展名
+        $this->setOption('originName', $name);
+         //获取文件后缀名，并将其转化为小写
+        $arrStr = explode('.', $name);
+        $this->setOption('fileType', end($arrStr));   //后缀名
+        
+        if (!$this->checkFileType())
+        {
+            $this->assignErrorInfo(-1);
+            $flag1 = false;
+        }
+
+        //3、检查文件大小
+        $this->setOption('fileSize', $size);
+        if (!$this->checkFileSize())
+        {
+            $this->assignErrorInfo(-2);
+            $flag2 = false;
+        }
+
+        if ($flag1 && $flag2)
+        {
+            return true;
+        }
+        else
         {
             return false;
         }
-       
-        $this->setOption('tmpFileName', $tmp_name);
-        $this->setOption('fileSize', $size);
-        return true;
     }
 
     /**
@@ -198,35 +199,40 @@ class FileUpload
      **/
     private function copyFile()
     {
-        if (!$this->errorNum)  //检查错误号,如果为0
+        //让'./uploads/' 和 './upload' 都能用  
+        $filepath = rtrim($this->filepath, '/') . '/';
+        $filepath .= $this->newFileName;  //连接文件名
+        if (is_uploaded_file($this->tmpFileName))
         {
-            //让'./uploads/' 和 './upload' 都能用  
-            $filepath = rtrim($this->filepath, '/') . '/';
-            $filepath .= $this->newFileName;  //连接文件名
-            if (is_uploaded_file($this->tmpFileName))
+            //开始移动
+            if (@move_uploaded_file($this->tmpFileName, $filepath))
             {
-                if (@move_uploaded_file($this->tmpFileName, $filepath))
-                {
-                    return true;
-                }
-                else
-                {
-                    $this->setOption('errorNum', -3);
-                    return false; 
-                }
+                return true;
             }
             else
             {
-                //如果不是通过 HTTP POST 上传的
-                return false;
+                $this->assignErrorInfo(-3);
+                return false; 
             }
-
         }
         else
         {
+            //如果不是通过 HTTP POST 上传的
+            $this->assignErrorInfo(-3);
             return false;
         }
     }
+
+    /**
+     *根据错误号，保存对应的错误信息
+     *@param int $num 传一个错误号
+     **/
+     public function assignErrorInfo($num)
+     {
+        $this->setOption('errorNum', $num);
+        $this->errorMsg[] = $this->getError();
+     }
+
      /**
         * 调用该方法上传文件
         * @parm string $fileField   上传文件的表单名称
@@ -234,105 +240,64 @@ class FileUpload
      **/
     public function uploadFile($fileField)
     {
-        $flag = true;   //记录成功和失败
-        //检查文件上传路径
+        //首先检查文件上传路径
         if (!$this->checkFilePath())
         {
-            $this->errorMsg = $this->getError();
+            $this->assignErrorInfo(-4);
             return false;   //如果上传路径失败，结束函数
         }
-        
+       
         $name = $_FILES[$fileField]['name']; //文件名
         $tmp_name = $_FILES[$fileField]['tmp_name']; //临时文件名
         $size = $_FILES[$fileField]['size'];  //文件大小
         $error = $_FILES[$fileField]['error'];  //错误号
 
+        $flag = array();        //记录每一个文件是否上传成功,目的是在多文件上传的时候，即使一个文件出错其他文件也能继续上传
         if (is_array($name))  //上传多个文件时
         {
-            $errors = array();
+            $filenames = array();    //存放上传后文件名的数组
             for ($i = 0; $i < count($name); $i++)
             {
                 if ($this->setFiles($name[$i], $tmp_name[$i], $size[$i], $error[$i]))
                 {
-                   if (!$this->checkFileSize())
-                   {
-                        $errors[] = $this->getError();
-                        $flag = false;
-                   }  
-                }
-                else
-                {
-                    $errors[] = $this->getError();
-                    $flag = false; 
-                } 
-                if (!$flag)  //如果flag 为false
-                {
-                    $this->setFiles();  //初始化一下
-                }
-            }
-
-            if ($flag)  //如果上传的文件没有错
-            {
-               $filenames = array();  //存放上传后文件名的数组
-               for ($i = 0; $i < count($name); $i++)
-               {
-                   if ($this->setFiles($name[$i], $tmp_name[$i], $size[$i], $error[$i]))
-                   {
-                       $this->setNewFileName();  //设置上传文件的文件名
-                        if (!$this->copyFile())  //如果从临时文件夹移动文件失败
-                        {
-                            $errors[] = $this->getError();
-                            $flag = false;
-                        } 
-                        else   //上传成功
-                        {
-                            $filenames[] = $this->newFileName; 
-                        }
-                   }
-               }
-               $this->newFileName = $filenames;  
-            }
-
-            $this->errorMsg = $errors;  //错误消息
-            return $flag;
-        }
-        else
-        {
-            if ($this->setFiles($name, $tmp_name, $size, $error)) //成功
-            {
-                //检查文件大小 
-                if ($this->checkFileSize()) 
-                {
-                    //文件大小没问题
                     $this->setNewFileName();  //设置上传文件的文件名
-                    if ($this->copyFile())
+                    if ($this->copyFile())    //如果从临时文件移动文件成功
                     {
-                        return true;
+                        $filenames[] = $this->newFileName;
+                        $flag[] = true;
                     }
                     else
                     {
-                        $flag = false;
+                        $flag[] = false;
                     }
                 }
                 else
                 {
-                    //有问题
-                    $flag = false;
+                    $flag[] = false;
+                }
+            }
+            $this->newFileName = $filenames;
+        }
+        else    //单个文件
+        {
+            if ($this->setFiles($name, $tmp_name, $size, $error))
+            {
+                $this->setNewFileName();  //设置上传文件的文件名
+                if ($this->copyFile())    //如果从临时文件移动文件成功
+                {
+                    $flag[] = true;
+                }
+                else
+                {
+                    $flag[] = false;
                 }
             }
             else
             {
-                $flag = false;
+                $flag[] = false;
             }
-
-            //将错误信息赋值给FileUpload类的$this->errorMsg 属性
-            if(!$flag)   //如果出错
-            {
-                $this->errorMsg = $this->getError();
-            }
-            
-            return $flag;
         }
+        return $flag;
     }
 
     /**

@@ -16,6 +16,10 @@ function __autoload($class)
     {
         require(ROOT . 'model/' . $class . '.class.php');
     }
+    else if (substr(strtolower($class), -4) == 'tool')
+    {
+        require(ROOT . 'tool/' . $class . '.class.php');
+    }
     else
     {
         require(ROOT . 'include/' . $class . '.class.php');

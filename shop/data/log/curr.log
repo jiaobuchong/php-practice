@@ -1437,3 +1437,47 @@ desc goods
 desc goods
 2014-12-16 11:17:05:      这是一次访问数据库。
 desc goods
+2014-12-31 19:14:57:      这是一次访问数据库。
+SELECT * FROM category 
+2014-12-31 19:14:59:      这是一次访问数据库。
+desc goods
+2014-12-31 19:15:16:      这是一次访问数据库。
+desc goods
+2014-12-31 19:36:38:      这是一次访问数据库。
+desc goods
+2014-12-31 19:37:33:      这是一次访问数据库。
+desc goods
+2014-12-31 19:51:37:      这是一次访问数据库。
+desc goods
+2014-12-31 19:51:59:      这是一次访问数据库。
+desc goods
+2014-12-31 19:51:59:      这是一次访问数据库。
+INSERT INTO goods (goods_name,goods_sn,cat_id,shop_price,market_price,goods_desc,goods_weight,goods_number,is_on_sale,keywords,goods_brief,goods_id,is_hot,is_new,is_best,add_time,original_img) VALUES(:goods_name,:goods_sn,:cat_id,:shop_price,:market_price,:goods_desc,:goods_weight,:goods_number,:is_on_sale,:keywords,:goods_brief,:goods_id,:is_hot,:is_new,:is_best,:add_time,:original_img)
+2014-12-31 19:51:59:      数据库执行SQL出错。INSERT INTO goods (goods_name,goods_sn,cat_id,shop_price,market_price,goods_desc,goods_weight,goods_number,is_on_sale,keywords,goods_brief,goods_id,is_hot,is_new,is_best,add_time,original_img) VALUES(:goods_name,:goods_sn,:cat_id,:shop_price,:market_price,:goods_desc,:goods_weight,:goods_number,:is_on_sale,:keywords,:goods_brief,:goods_id,:is_hot,:is_new,:is_best,:add_time,:original_img) SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'goods_sn'
+2014-12-31 20:02:45:      这是一次访问数据库。
+desc goods
+2014-12-31 20:02:45:      这是一次访问数据库。
+INSERT INTO goods (goods_name,goods_sn,cat_id,shop_price,market_price,goods_desc,goods_weight,goods_number,is_on_sale,keywords,goods_brief,goods_id,is_hot,is_new,is_best,add_time,original_img) VALUES(:goods_name,:goods_sn,:cat_id,:shop_price,:market_price,:goods_desc,:goods_weight,:goods_number,:is_on_sale,:keywords,:goods_brief,:goods_id,:is_hot,:is_new,:is_best,:add_time,:original_img)
+2014-12-31 20:02:45:      数据库执行SQL出错。INSERT INTO goods (goods_name,goods_sn,cat_id,shop_price,market_price,goods_desc,goods_weight,goods_number,is_on_sale,keywords,goods_brief,goods_id,is_hot,is_new,is_best,add_time,original_img) VALUES(:goods_name,:goods_sn,:cat_id,:shop_price,:market_price,:goods_desc,:goods_weight,:goods_number,:is_on_sale,:keywords,:goods_brief,:goods_id,:is_hot,:is_new,:is_best,:add_time,:original_img) SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'goods_sn'
+2014-12-31 20:07:33:      这是一次访问数据库。
+desc goods
+2014-12-31 20:07:33:      这是一次访问数据库。
+INSERT INTO goods (goods_name,goods_sn,cat_id,shop_price,market_price,goods_desc,goods_weight,goods_number,is_on_sale,keywords,goods_brief,goods_id,is_hot,is_new,is_best,add_time,original_img) VALUES(:goods_name,:goods_sn,:cat_id,:shop_price,:market_price,:goods_desc,:goods_weight,:goods_number,:is_on_sale,:keywords,:goods_brief,:goods_id,:is_hot,:is_new,:is_best,:add_time,:original_img)
+2014-12-31 20:07:33:      数据库执行SQL出错。INSERT INTO goods (goods_name,goods_sn,cat_id,shop_price,market_price,goods_desc,goods_weight,goods_number,is_on_sale,keywords,goods_brief,goods_id,is_hot,is_new,is_best,add_time,original_img) VALUES(:goods_name,:goods_sn,:cat_id,:shop_price,:market_price,:goods_desc,:goods_weight,:goods_number,:is_on_sale,:keywords,:goods_brief,:goods_id,:is_hot,:is_new,:is_best,:add_time,:original_img) SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '' for key 'goods_sn'
+2014-12-31 20:10:11:      这是一次访问数据库。
+desc goods
+2014-12-31 20:10:11:      这是一次访问数据库。
+INSERT INTO goods (goods_name,goods_sn,cat_id,shop_price,market_price,goods_desc,goods_weight,goods_number,is_on_sale,keywords,goods_brief,goods_id,is_hot,is_new,is_best,add_time,original_img) VALUES(:goods_name,:goods_sn,:cat_id,:shop_price,:market_price,:goods_desc,:goods_weight,:goods_number,:is_on_sale,:keywords,:goods_brief,:goods_id,:is_hot,:is_new,:is_best,:add_time,:original_img)
+2014-12-31 20:10:33:      这是一次访问数据库。
+desc goods
+2014-12-31 20:10:33:      这是一次访问数据库。
+INSERT INTO goods (goods_name,goods_sn,cat_id,shop_price,market_price,goods_desc,goods_weight,goods_number,is_on_sale,keywords,goods_brief,goods_id,is_hot,is_new,is_best,add_time,original_img) VALUES(:goods_name,:goods_sn,:cat_id,:shop_price,:market_price,:goods_desc,:goods_weight,:goods_number,:is_on_sale,:keywords,:goods_brief,:goods_id,:is_hot,:is_new,:is_best,:add_time,:original_img)
+2014-12-31 20:10:58:      这是一次访问数据库。
+desc goods
+2014-12-31 20:10:58:      这是一次访问数据库。
+INSERT INTO goods (goods_name,goods_sn,cat_id,shop_price,market_price,goods_desc,goods_weight,goods_number,is_on_sale,keywords,goods_brief,goods_id,is_hot,is_new,is_best,add_time,original_img) VALUES(:goods_name,:goods_sn,:cat_id,:shop_price,:market_price,:goods_desc,:goods_weight,:goods_number,:is_on_sale,:keywords,:goods_brief,:goods_id,:is_hot,:is_new,:is_best,:add_time,:original_img)
+2014-12-31 20:10:58:      数据库执行SQL出错。INSERT INTO goods (goods_name,goods_sn,cat_id,shop_price,market_price,goods_desc,goods_weight,goods_number,is_on_sale,keywords,goods_brief,goods_id,is_hot,is_new,is_best,add_time,original_img) VALUES(:goods_name,:goods_sn,:cat_id,:shop_price,:market_price,:goods_desc,:goods_weight,:goods_number,:is_on_sale,:keywords,:goods_brief,:goods_id,:is_hot,:is_new,:is_best,:add_time,:original_img) SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '232' for key 'goods_sn'
+2014-12-31 20:35:31:      这是一次访问数据库。
+desc goods
+2014-12-31 20:35:31:      这是一次访问数据库。
+INSERT INTO goods (goods_name,goods_sn,cat_id,shop_price,market_price,goods_desc,goods_weight,goods_number,is_on_sale,keywords,goods_brief,goods_id,is_hot,is_new,is_best,add_time,original_img) VALUES(:goods_name,:goods_sn,:cat_id,:shop_price,:market_price,:goods_desc,:goods_weight,:goods_number,:is_on_sale,:keywords,:goods_brief,:goods_id,:is_hot,:is_new,:is_best,:add_time,:original_img)

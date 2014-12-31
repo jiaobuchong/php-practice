@@ -62,7 +62,12 @@ echo '</pre>';
 //自动验证
 $goods->_validate($data);
 print_r($goods->getErr());
-exit;
+
+//图片上传
+$upTool = new UploadTool();
+$res = $upTool->uploadFile();
+var_dump($res);
+$data['original_img'] = implode(',', $upTool->getFullpath()); 
 if($goods->add($data))
 {
     echo 'Add goods success!';
